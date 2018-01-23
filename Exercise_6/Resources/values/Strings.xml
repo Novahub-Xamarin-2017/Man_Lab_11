@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Exercise_6</string>
+  <string name="DateTime">Date Time : </string>
+  <string name="Source">Source : </string>
+  <string name="Name">Name : </string>
+  <string name="Code">Code : </string>
+  <string name="Buy">Buy : </string>
+  <string name="Transfer">Transfer : </string>
+  <string name="Sell">Sell : </string>
+</resources>
