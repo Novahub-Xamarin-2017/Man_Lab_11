@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Exercise_5</string>
+  <string name="UpdatedTime">Updated : </string>
+  <string name="Unit">Unit : </string>
+  <string name="Name">City : </string>
+</resources>
