@@ -1,18 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Xml.Serialization;
-using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
+﻿using System.Xml.Serialization;
 
 namespace Exercise_5.Models
 {
-    class SjcGoldRate
+    [XmlRoot("root")]
+    public class SjcGoldRate
     {
         [XmlElement("title")]
         public string Title { get; set; }
@@ -21,6 +12,6 @@ namespace Exercise_5.Models
         public string Url { get; set; }
 
         [XmlElement("ratelist")]
-        public CityList Cities { get; set; }
+        public CityList CityList { get; set; }
     }
 }

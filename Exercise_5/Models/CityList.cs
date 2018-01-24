@@ -1,18 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Xml.Serialization;
-using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 
 namespace Exercise_5.Models
 {
-    class CityList
+    public class CityList
     {
         [XmlAttribute(AttributeName = "updated")]
         public string UpdatedTime { get; set; }
@@ -20,7 +11,7 @@ namespace Exercise_5.Models
         [XmlAttribute(AttributeName = "unit")]
         public string Unit { get; set; }
         
-        [XmlElement("ratelist")]
+        [XmlElement("city")]
         public List<City> Cities { get; set; }
     }
 }

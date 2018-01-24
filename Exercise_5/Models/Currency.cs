@@ -12,5 +12,7 @@ namespace Exercise_5.Models
 
         [XmlAttribute(AttributeName = "type")]
         public string Type { get; set; }
+
+        public override string ToString() => $"Type: {Type}\nBuy: {Buy}\t\t\tSell: {Sell}";
     }
 }
