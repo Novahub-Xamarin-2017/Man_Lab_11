@@ -24,7 +24,6 @@ namespace Exercise_3
         {
             base.OnCreate(savedInstanceState);
 
-            // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
             Cheeseknife.Inject(this);
             rvResults.SetLayoutManager(new LinearLayoutManager(this));
