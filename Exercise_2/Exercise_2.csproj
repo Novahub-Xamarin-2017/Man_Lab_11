@@ -139,11 +139,15 @@
     <Compile Include="Adapters\UserViewHolder.cs" />
     <Compile Include="Cheeseknife.cs" />
     <Compile Include="Controllers\GithubApiServices.cs" />
+    <Compile Include="Interfaces\IItemClickListener.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Models\ListUser.cs" />
+    <Compile Include="Models\Repo.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserDetail.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShowUserDetailActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GettingStarted.Xamarin" />
@@ -152,6 +156,9 @@
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
     <AndroidResource Include="Resources\layout\user_item.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\activity_show_detail.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
