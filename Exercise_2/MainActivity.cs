@@ -1,4 +1,6 @@
-﻿using Android.App;
+﻿using System;
+using System.Net;
+using Android.App;
 using Android.OS;
 using Android.Support.V7.Widget;
 using Exercise_2.Adapters;
@@ -22,22 +24,31 @@ namespace Exercise_2
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
-            // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
             Cheeseknife.Inject(this);
             Init();
-            
         }
 
         private void Init()
         {
             rvResults.SetLayoutManager(new LinearLayoutManager(this));
+            
             var service = new GithubApiServices();
             svUsers.QueryTextSubmit += (s, e) =>
             {
-                listUser = service.SeachUsers(svUsers.Query);
-                adapter = new UserAdapter(listUser);
+                try
+                {
+                    listUser = service.SeachUsers(svUsers.Query);
+                }
+                catch (WebException exception)
+                {
+                    Console.WriteLine(exception);
+                    return;
+                }
+                if (adapter == null)
+                    adapter = new UserAdapter(listUser);
+                else
+                    adapter.NotifyDataSetChanged();
                 rvResults.SetAdapter(adapter);
             };
         }

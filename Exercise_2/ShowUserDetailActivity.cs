@@ -1,4 +1,6 @@
-﻿using Android.App;
+﻿using System;
+using System.Net;
+using Android.App;
 using Android.OS;
 using Android.Widget;
 using Exercise_2.Controllers;
@@ -28,9 +30,17 @@ namespace Exercise_2
         {
             login = Intent.GetStringExtra("Login");
             services = new GithubApiServices();
-            tvDetail.Text = services.GetUserDetail(login).ToString();
-            lvRepos.Adapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1,
-                services.GetUserReposList(login));
+            try
+            {
+                tvDetail.Text = services.GetUserDetail(login).ToString();
+                lvRepos.Adapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1,
+                    services.GetUserReposList(login));
+            }
+            catch (WebException e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
     }
 }
