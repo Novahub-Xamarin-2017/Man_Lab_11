@@ -25,7 +25,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
-namespace Exercise4 {
+namespace Ex4 {
 	/// <summary>
 	/// Base injection attribute, to include a ResourceId
 	/// which should refer to an Android view resource id.

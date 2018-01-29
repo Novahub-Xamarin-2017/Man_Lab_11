@@ -1,10 +1,10 @@
 ﻿using System.Net;
 using Android.Util;
-using Exercise4.Models;
+using Ex4.Models;
 using Newtonsoft.Json;
 using RestSharp;
 
-namespace Exercise4.Controllers
+namespace Ex4.Controllers
 {
     public class OpenWeatherMapServices
     {
