@@ -1,7 +1,6 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
-using Android.Util;
 using Exercise_4.Controllers;
 
 namespace Exercise_4
