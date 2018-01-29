@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Exercise_4</string>
+  <string name="Login">Log in</string>
+  <string name="Password">Password</string>
+  <string name="Logout">Log out</string>
+  <string name="GetTweets">Get Tweets</string>
+  <string name="Id">Id : </string>
+  <string name="Author">Author : </string>
+  <string name="Content">Content : </string>
+</resources>
