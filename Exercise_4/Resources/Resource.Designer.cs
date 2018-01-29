@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("Exercise_4.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("Exercise4.Resource", IsApplication=true)]
 
-namespace Exercise_4
+namespace Exercise4.Resources
 {
 	
 	

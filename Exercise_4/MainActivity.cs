@@ -1,11 +1,11 @@
 ﻿using Android.App;
-using Android.Widget;
 using Android.OS;
-using Exercise_4.Controllers;
+using Android.Widget;
+using Exercise4.Controllers;
 
-namespace Exercise_4
+namespace Exercise4
 {
-    [Activity(Label = "Exercise_4", MainLauncher = true)]
+    [Activity(Label = "Exercise4", MainLauncher = true)]
     public class MainActivity : Activity
     {
         [InjectView(Resource.Id.tvWeatherInfo)] private TextView tvWeatherInfo;

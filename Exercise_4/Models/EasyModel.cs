@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Reflection;
 
-namespace Exercise_4.Models
+namespace Exercise4.Models
 {
     public class EasyModel
     {

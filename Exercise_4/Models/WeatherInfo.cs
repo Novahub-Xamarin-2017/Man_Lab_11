@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace Exercise_4.Models
+namespace Exercise4.Models
 {
     public class WeatherInfo
     {

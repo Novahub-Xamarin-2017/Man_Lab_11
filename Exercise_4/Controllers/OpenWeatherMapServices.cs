@@ -1,9 +1,10 @@
 ﻿using System.Net;
-using Exercise_4.Models;
+using Android.Util;
+using Exercise4.Models;
 using Newtonsoft.Json;
 using RestSharp;
 
-namespace Exercise_4.Controllers
+namespace Exercise4.Controllers
 {
     public class OpenWeatherMapServices
     {
@@ -15,11 +16,19 @@ namespace Exercise_4.Controllers
 
         public WeatherInfo GetWeatherByCityName(string cityName)
         {
-            var request = new RestRequest($"/data/2.5/weather?q={cityName}&appid={ApiKey}", Method.GET);
-            var response = restClient.Execute(request);
-            return (response.StatusCode == HttpStatusCode.OK)
-                ? JsonConvert.DeserializeObject<WeatherInfo>(response.Content)
-                : null;
+            try
+            {
+                var request = new RestRequest($"/data/2.5/weather?q={cityName}&appid={ApiKey}", Method.GET);
+                var response = restClient.Execute(request);
+                return (response.StatusCode == HttpStatusCode.OK)
+                    ? JsonConvert.DeserializeObject<WeatherInfo>(response.Content)
+                    : null;
+            }
+            catch (WebException e)
+            {
+                Log.Info("WebException", e.Message);
+                throw;
+            }
         }
     }
 }
